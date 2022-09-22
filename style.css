@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 98%);
+    --gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+
+    --fs: 18px;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    position: relative;
+    color: var(--black);
+    background-color: var(--white);
+    margin: 0;
+    padding: 20px 0;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: var(--white);
+    display: flex;
+    position: relative;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-mobile-menu, #mobile-menu-icon {
+    display: none;
+}
+
+.nav-text > img {
+    margin: 0;
+}
+
+nav img {
+    margin: 0 50px 0 20px
+}
+
+.nav-container {
+    margin: 0 20px;
+    height: 50px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+#nav-logreg-container {
+    margin: 0 50px 0 auto;
+    display: flex;
+}
+
+#nav-logreg-container p {
+    margin: auto 20px;
+}
+
+#left-container {
+    width: 45%;
+    height: calc(100vh - 150px);
+    box-sizing: border-box;
+    padding-left: 5%;
+}
+
+#left-container h2 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+#left-container p {
+    width: 400px;
+    color: var(--gray);
+}
+
+#left-container button {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: block;
+    width: 150px;
+    margin: 50px auto;
+}
+
+#company-footer {
+    height: 20px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+
+#company-footer img {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+#right-container {
+    width: 45%;
+    height: calc(100vh - 150px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#right-container img {
+    height: 100%;
+    margin: auto;
+}
+
+.attribution {
+    text-align: left;
+    margin-top: 50px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .nav-container, #nav-logreg-container {
+        display: none;
+    }
+    
+    #mobile-menu-icon {
+        position: absolute;
+        display: inline-block;
+        height: 20px;
+        right: 0;
+        cursor: pointer;
+    }
+
+    nav img {
+        height: 30px;
+    }
+  }

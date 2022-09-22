@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,24 +16,74 @@
 </head>
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <nav>
+    <img src="/images/logo.svg">
+    <div class="nav-container">
+      <a><p class="nav-text">Features <img src="images/icon-arrow-down.svg"></p></a>
+    </div>
+    <div class="nav-container">
+      <a><p class="nav-text">Company <img src="images/icon-arrow-down.svg"></p></a>
+    </div>
+    <div class="nav-container">
+      <p class="nav-text">Career</p>
+    </div>
+    <div class="nav-container">
+      <p class="nav-text">About</p>
+    </div>
+    <div id="nav-logreg-container" class="nav-container">
+      <p class="nav-text">Login</p>
+      <p class="nav-text">Register</p>
+    </div>
 
-  Login
-  Register
+    <img id="mobile-menu-icon" src="/images/icon-menu.svg" onclick="menuToggle()">
 
-  Make remote work
+    <div id="nav-mobile-menu">
+      <div class="nav-container">
+        <p class="nav-text">Features <img src="images/icon-arrow-down.svg"></p>
+      </div>
+      <div class="nav-container">
+        <p class="nav-text">Company <img src="images/icon-arrow-down.svg"></p>
+      </div>
+      <div class="nav-container">
+        <p class="nav-text">Career</p>
+      </div>
+      <div class="nav-container">
+        <p class="nav-text">About</p>
+      </div>  
+    </div>
+  </nav>
+  <main>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+    <div id="left-container">
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <h2> Make <br> remote work </h2>
+      <p> Get your team in sync, no matter your location. <br>
+         Streamline processes, create team rituals, and watch productivity soar. </p>
+
+      <button type="button" disabled> Learn more </button>
+
+      <div id="company-footer">
+        <img src="/images/client-databiz.svg">
+        <img src="/images/client-audiophile.svg">
+        <img src="/images/client-meet.svg">
+        <img src="/images/client-maker.svg">
+      </div>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        <br>
+        Coded by <a href="#">Lucas Löser</a>.
+      </div>
+
+    </div>
+
+    <div id="right-container">
+      <img src="/images/image-hero-desktop.png">
+    </div>
+
+  </main>
+
+  <script src="/stuff.js" defer></script>
+
 </body>
 </html>
