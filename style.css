@@ -14,7 +14,7 @@ body {
     color: var(--black);
     background-color: var(--white);
     margin: 0;
-    padding: 20px 0;
+    padding: 0;
 }
 
 nav {
@@ -25,20 +25,27 @@ nav {
     position: relative;
     padding: 0 10px;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 main {
     display: flex;
     justify-content: space-around;
+    padding-top: 100px;
 }
 
-#nav-mobile-menu, #mobile-menu-icon {
-    display: none;
+.nav-text {
+    cursor: pointer;
 }
 
 .nav-text > img {
     margin: 0;
+}
+
+#nav-text-register {
+    border: 1px solid var(--black);
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 nav img {
@@ -48,10 +55,50 @@ nav img {
 .nav-container {
     margin: 0 20px;
     height: 50px;
+    position: relative;
 }
 
+.nav-hover {
+    background-color: white;
+    box-shadow: 5px 5px 15px 5px #DDDDDD;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: var(--gray);
+    font-size: 0.8rem;
+    position: absolute;
+    white-space: nowrap;
+}
+
+#nav-hover-features {
+    left: -50px;
+}
+
+ul {
+    line-height: 2.5;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+li {
+    cursor: pointer;
+}
+
+li:hover {
+    color: var(--black)
+}
+
+
+
+ul img {
+    margin: 0;
+    margin-right: 1rem; 
+}
+
+
 nav a:hover {
-    color: red;
+    color: var(--gray);
 }
 
 #nav-logreg-container {
@@ -65,7 +112,7 @@ nav a:hover {
 
 #left-container {
     width: 45%;
-    height: calc(100vh - 150px);
+    height: 600px;
     box-sizing: border-box;
     padding-left: 5%;
 }
@@ -106,7 +153,7 @@ nav a:hover {
 
 #right-container {
     width: 45%;
-    height: calc(100vh - 150px);
+    height: 600px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -116,6 +163,10 @@ nav a:hover {
     margin: auto;
 }
 
+.invisible {
+    display: none;
+}
+
 .attribution {
     text-align: left;
     margin-top: 50px;
@@ -123,6 +174,23 @@ nav a:hover {
 
 
 @media only screen and (max-width: 1000px) {
+
+    main {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    nav {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    nav img {
+        margin-top: 20px;
+        height: 30px;
+    }
+
     .nav-container, #nav-logreg-container {
         display: none;
     }
@@ -133,9 +201,97 @@ nav a:hover {
         height: 20px;
         right: 0;
         cursor: pointer;
+        margin: 20px;
+        z-index: 3;
     }
 
-    nav img {
-        height: 30px;
+    #nav-mobile-overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height:100vh;
+        box-sizing: border-box;
+        background-color: black;
+        opacity: 0.2;
     }
+
+    #nav-mobile-menu {
+        width: 200px;
+        height: 100vh;
+        box-sizing:border-box;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        background-color: var(--white);
+        padding: 20px;
+    }
+
+    .nav-container-mobile {
+        margin: 30px 0;
+    }
+
+    .nav-hover {
+        position: unset;
+        background-color: unset;
+        box-shadow: unset;
+        z-index: 3;
+    }
+
+    #arrow-img {
+        height: 0.6rem;
+    }
+
+    ul {
+        font-size: 0.9rem;
+    }
+
+    ul img {
+        height: auto;
+    }
+
+    #right-container {
+        order: -1;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;   
+    }
+
+    #right-container > picture > img {
+        width: 100%;
+        height: auto;
+    }
+
+    #left-container {
+        width: 100%;
+        height: unset;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    #left-container p {
+        width: unset;
+
+    }
+
+    #left-container h2 {
+        font-size: 8vw;
+        width: 100%;
+    }
+
+    #left-container button {
+        margin: 10vw auto;
+    }
+
+    #company-footer {
+        width: unset;
+        height: 4vw;
+    }
+
+    .br-class {
+        display: none;
+    }
+
   }

@@ -19,10 +19,26 @@
   <nav>
     <img src="/images/logo.svg">
     <div class="nav-container">
-      <a><p class="nav-text">Features <img src="images/icon-arrow-down.svg"></p></a>
+      <a onclick="openFeaturesSub()"><p class="nav-text">Features <img id="arrow-img" src="images/icon-arrow-down.svg"></p></a>
+      <div id ="nav-hover-features" class="nav-hover invisible">
+        <ul>
+          <li><img src="images/icon-todo.svg">Todo List</li>
+          <li><img src="images/icon-calendar.svg">Calendar</li>
+          <li><img src="images/icon-reminders.svg">Reminders</li>
+          <li><img src="images/icon-planning.svg">Planning</li>
+        </ul>
+      </div>
     </div>
     <div class="nav-container">
-      <a><p class="nav-text">Company <img src="images/icon-arrow-down.svg"></p></a>
+      <a onclick="openCompanySub()"><p class="nav-text">Company <img id="arrow-img" src="images/icon-arrow-down.svg"></p></a>
+      <div id ="nav-hover-company" class="nav-hover invisible">
+        <ul>
+          <li>History</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+    </div>
     </div>
     <div class="nav-container">
       <p class="nav-text">Career</p>
@@ -32,31 +48,48 @@
     </div>
     <div id="nav-logreg-container" class="nav-container">
       <p class="nav-text">Login</p>
-      <p class="nav-text">Register</p>
+      <p id="nav-text-register" class="nav-text">Register</p>
     </div>
 
-    <img id="mobile-menu-icon" src="/images/icon-menu.svg" onclick="menuToggle()">
+    <img id="mobile-menu-icon" class="invisible" src="/images/icon-menu.svg" onclick="menuToggle()">
 
-    <div id="nav-mobile-menu">
-      <div class="nav-container">
-        <p class="nav-text">Features <img src="images/icon-arrow-down.svg"></p>
-      </div>
-      <div class="nav-container">
-        <p class="nav-text">Company <img src="images/icon-arrow-down.svg"></p>
-      </div>
-      <div class="nav-container">
-        <p class="nav-text">Career</p>
-      </div>
-      <div class="nav-container">
-        <p class="nav-text">About</p>
-      </div>  
+    <div id="nav-mobile-overlay" class="invisible">
     </div>
+      <div id="nav-mobile-menu" class="invisible">
+        <div class="nav-container-mobile">
+         <a onclick="openFeaturesSubMobile()"> <p class="nav-text">Features <img id="arrow-img" src="images/icon-arrow-down.svg"></p></a>
+          <div id ="nav-hover-features-mobile" class="nav-hover invisible">
+            <ul>
+              <li><img src="images/icon-todo.svg">Todo List</li>
+              <li><img src="images/icon-calendar.svg">Calendar</li>
+              <li><img src="images/icon-reminders.svg">Reminders</li>
+              <li><img src="images/icon-planning.svg">Planning</li>
+            </ul>
+      </div>
+        </div>
+        <div class="nav-container-mobile">
+          <a onclick="openCompanySubMobile()"><p class="nav-text">Company <img id="arrow-img" src="images/icon-arrow-down.svg"></p></a>
+          <div id ="nav-hover-company-mobile" class="nav-hover invisible">
+            <ul>
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-container-mobile">
+          <p class="nav-text">Career</p>
+        </div>
+        <div class="nav-container-mobile">
+          <p class="nav-text">About</p>
+        </div>  
+      </div>
   </nav>
   <main>
 
     <div id="left-container">
 
-      <h2> Make <br> remote work </h2>
+      <h2> Make <br class="br-class"> remote work </h2>
       <p> Get your team in sync, no matter your location. <br>
          Streamline processes, create team rituals, and watch productivity soar. </p>
 
@@ -78,7 +111,10 @@
     </div>
 
     <div id="right-container">
-      <img src="/images/image-hero-desktop.png">
+      <picture>
+        <source media="(max-width:1000px)" srcset="/images/image-hero-mobile.png">
+        <img src="/images/image-hero-desktop.png" alt="hero-image">
+      </picture>
     </div>
 
   </main>
